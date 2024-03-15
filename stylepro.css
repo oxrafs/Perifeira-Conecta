@@ -1,0 +1,306 @@
+  /*css index*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin     : 0;
+  padding    : 0;
+  box-sizing : border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height         : 100vh;
+  background         : url("body.jfif") no-repeat;
+  background-size    : cover;
+  background-position: center;
+  backdrop-filter    : blur(2px);
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color          : #fff;
+  font-size      : 1rem;
+}
+a:hover {
+  color: rgb(2, 255, 2);
+}
+
+  /*Começo menu*/
+header {
+  position: relative;
+  padding : 0 2rem;
+}
+
+.navbar {
+  width          : 100%;
+  height         : 60px;
+  max-width      : 1200px;
+  margin         : 0 auto;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  font-size      : 15px;
+}
+
+  /*começo logo*/
+
+.logo {
+  font-size      : 25px;
+  color          : #fff;
+  text-decoration: none;
+  font-weight    : bold;
+}
+
+.navbar .logo a {
+  font-size  : 1.5rem;
+  font-weight: bold;
+}
+
+.subtitulo {
+  font-size : 15px;
+  color     : rgb(2, 255, 2);
+  text-align: center;
+}
+
+.subtitulo::before {
+  width : 16px;
+  height: 16px;
+}
+
+  /*fim logo*/
+
+.navbar .links {
+  display: flex;
+  gap    : 2rem;
+}
+
+.navbar .toggle_btn {
+  color    : #fff;
+  font-size: 1.5rem;
+  cursor   : pointer;
+  display  : none;
+}
+
+.action_btn {
+  background-color: green;
+  color           : #fff;
+  padding         : 0.5rem 1rem;
+  border          : none;
+  outline         : none;
+  border-radius   : 20px;
+  font-size       : 0.8rem;
+  font-weight     : bold;
+  cursor          : pointer;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+.search input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid green;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search button {
+  background-color: green;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search button img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.search input[type="text"]:focus {
+  border-color: greenyellow;
+}
+
+.search button:hover {
+  background-color: greenyellow;
+}
+  /*FIM MENU*/
+
+  /*DROPDOWN MENU*/
+.dropdown_menu {
+  display        : none;
+  position       : absolute;
+  right          : 2rem;
+  top            : 130px;
+  height         : 0;
+  width          : 300px;
+  background     : rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius  : 10px;
+  overflow       : hidden;
+  transition     : heigth 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding        : 0.7rem;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.dropdown_menu  {
+  width          : 100%;
+  display        : flex;
+  justify-content: center;
+}
+
+  /*HERO*/
+section#hero {
+  display        : flex;
+  font-size      : 23px;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  text-align     : center;
+  color          : #fff;
+}
+
+#hero h1 {
+  font-size    : 3rem;
+  margin-bottom: 1rem;
+}
+
+.negocios {
+  color     : #fff;
+  text-align: center;
+    font-size: 25px;
+}
+
+.botaosaiba {
+  width          : 100%;
+  height         : 4vh;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+input[type="submit"] {
+  padding         : 5px 20px;
+  font-size       : 20px;
+  background-color: green;
+  border          : 1px solid green;
+  border-radius   : 50px;
+  cursor          : pointer;
+  color           : white;
+  transition      : 0.2s;
+  outline         : 0;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color           : green;
+}
+
+.linha {
+  height          : 3px;                         /* Altura da linha */
+  background-color: rgba(255, 255, 255, 0.445);  /* Cor da linha */
+  margin-top      : 0px;                         /* Espaçamento acima da linha */
+  margin-bottom   : 5px;                         /* Espaçamento abaixo da linha */
+                                                 /* Outras propriedades de estilo que você queira adicionar */
+}
+
+.titulo {
+  font-size: 30px;
+  padding  : 10px;
+}
+
+.negocios h1 {
+  font-size    : 40px;
+  margin-bottom: 1rem;
+}
+
+.negocios h2{
+  font-size: 60px;
+   color: green;
+}
+
+  /*Começo Animation*/
+@keyframes entering {
+  from {
+    opacity  : 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity  : 1;
+    transform: translateY(0);
+  }
+}
+.body {
+  padding  : 64px;
+  grid-area: timeline;
+    /*overflow-y: scroll;*/
+  animation: entering 0.7s ease-in-out;
+}
+
+.navbar {
+  padding  : 64px;
+  grid-area: timeline;
+    /*overflow-y: scroll;*/
+  animation: entering 0.7s ease-in-out;
+}
+
+.descida {
+  padding  : 64px;
+  grid-area: timeline;
+    /*overflow-y: scroll;*/
+  animation: entering 0.7s ease-in-out;
+}
+
+.negocios {
+  padding  : 64px;
+  grid-area: timeline;
+    /*overflow-y: scroll;*/
+  animation: entering 0.7s ease-in-out;
+}
+
+.hero {
+  text-align: center;
+}
+
+ /*Respansividade designer*/
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .search {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left : 2rem;
+    width: unset;
+  }
+}
